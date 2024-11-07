@@ -179,3 +179,15 @@ if __name__ == "__main__":
         """
         )
         sys.exit()
+        
+    if (
+        not config.username
+        and not config.email
+        and not config.username_file
+        and not config.email_file
+    ):
+        config.console.print("Either --username or --email is required")
+        sys.exit()
+    if not config.username and (config.permute or config.permuteall):
+        config.console.print("Permutations requires --username")
+        sys.exit()
