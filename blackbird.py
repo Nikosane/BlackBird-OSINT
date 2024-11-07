@@ -179,7 +179,7 @@ if __name__ == "__main__":
         """
         )
         sys.exit()
-        
+
     if (
         not config.username
         and not config.email
@@ -191,3 +191,8 @@ if __name__ == "__main__":
     if not config.username and (config.permute or config.permuteall):
         config.console.print("Permutations requires --username")
         sys.exit()
+
+    if config.no_update:
+        config.console.print(":next_track_button:  Skipping update...")
+    else:
+        checkUpdates(config)
