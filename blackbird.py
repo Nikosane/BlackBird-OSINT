@@ -196,3 +196,13 @@ if __name__ == "__main__":
         config.console.print(":next_track_button:  Skipping update...")
     else:
         checkUpdates(config)
+
+    if config.username_file:
+        if isFile(config.username_file):
+            config.username = getLinesFromFile(config.username_file)
+            config.console.print(
+                f':glasses: Successfully loaded {len(config.username)} usernames from "{config.username_file}"'
+            )
+        else:
+            config.console.print(f'❌ Could not read file "{config.username_file}"')
+            sys.exit()
