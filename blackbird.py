@@ -227,3 +227,10 @@ if __name__ == "__main__":
                 saveToPdf(config.usernameFoundAccounts, "username", config)
             config.currentUser = None
             config.usernameFoundAccounts = None
+
+    if config.email_file:
+        if isFile(config.email_file):
+            config.email = getLinesFromFile(config.email_file)
+            config.console.print(
+                f':glasses: Successfully loaded {len(config.email)} emails from "{config.email_file}"'
+            )
