@@ -216,3 +216,10 @@ if __name__ == "__main__":
             config.console.print(
                 f":glasses: Successfully loaded {len(config.username)} usernames from permuting {elements}"
             )
+        for user in config.username:
+            config.currentUser = user
+            if config.dump or config.csv or config.pdf:
+                createSaveDirectory(config)
+            verifyUsername(config.currentUser, config)
+            if config.csv and config.usernameFoundAccounts:
+                saveToCsv(config.usernameFoundAccounts, config)
