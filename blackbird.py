@@ -237,3 +237,10 @@ if __name__ == "__main__":
         else:
             config.console.print(f'❌ Could not read file "{config.email_file}"')
             sys.exit()
+
+    if config.email:
+        for email in config.email:
+            config.currentEmail = email
+            if config.dump or config.csv or config.pdf:
+                createSaveDirectory(config)
+            verifyEmail(email, config)
