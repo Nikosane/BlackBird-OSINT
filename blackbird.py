@@ -206,3 +206,13 @@ if __name__ == "__main__":
         else:
             config.console.print(f'❌ Could not read file "{config.username_file}"')
             sys.exit()
+
+    if config.username:
+        if (config.permute or config.permuteall) and len(config.username) > 1:
+            elements = " ".join(config.username)
+            way = "all" if config.permuteall else "strict"
+            permute = Permute(config.username)
+            config.username = permute.gather(way)
+            config.console.print(
+                f":glasses: Successfully loaded {len(config.username)} usernames from permuting {elements}"
+            )
