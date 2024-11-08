@@ -244,3 +244,9 @@ if __name__ == "__main__":
             if config.dump or config.csv or config.pdf:
                 createSaveDirectory(config)
             verifyEmail(email, config)
+            if config.csv and config.emailFoundAccounts:
+                saveToCsv(config.emailFoundAccounts, config)
+            if config.pdf and config.emailFoundAccounts:
+                saveToPdf(config.emailFoundAccounts, "email", config)
+            config.currentEmail = None
+            config.emailFoundAccounts = None
