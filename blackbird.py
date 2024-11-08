@@ -223,3 +223,7 @@ if __name__ == "__main__":
             verifyUsername(config.currentUser, config)
             if config.csv and config.usernameFoundAccounts:
                 saveToCsv(config.usernameFoundAccounts, config)
+            if config.pdf and config.usernameFoundAccounts:
+                saveToPdf(config.usernameFoundAccounts, "username", config)
+            config.currentUser = None
+            config.usernameFoundAccounts = None
