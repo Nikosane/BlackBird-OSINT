@@ -234,3 +234,6 @@ if __name__ == "__main__":
             config.console.print(
                 f':glasses: Successfully loaded {len(config.email)} emails from "{config.email_file}"'
             )
+        else:
+            config.console.print(f'❌ Could not read file "{config.email_file}"')
+            sys.exit()
