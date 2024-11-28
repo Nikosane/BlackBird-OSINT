@@ -25,3 +25,15 @@ To use BlackBird-OSINT, follow these steps:
 $ git clone https://github.com/Nikosane/BlackBird-OSINT.git
 $ cd BlackBird-OSINT
 ```
+### Install Dependencies
+
+Use the following command to install the required Python packages:
+
+```bash
+$ pip install -r requirements.txt
+```
+
+### Configure APIs (if applicable)
+
+- Obtain API keys for the services you wish to use.
+- Add them to the configuration file (e.g., `config.json`).
