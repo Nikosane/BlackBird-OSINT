@@ -66,3 +66,29 @@ $ python blackbird.py
   $ python blackbird.py --ip 192.168.1.1
   ```
 
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to BlackBird-OSINT, follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-branch`).
+3. Make your changes and commit them (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature-branch`).
+5. Open a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+## Disclaimer
+
+BlackBird-OSINT is intended for legal and ethical use only. Users are responsible for ensuring compliance with local laws and regulations. The creators of this tool are not responsible for any misuse.
+
+## Contact
+
+For support or further information, please reach out via [GitHub Issues](https://github.com/Nikosane/BlackBird-OSINT/issues).
+
+---
+
+Happy OSINTing!
+
