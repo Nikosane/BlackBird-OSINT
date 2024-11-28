@@ -35,6 +35,9 @@ $ pip install -r requirements.txt
 
 ### Configure APIs (if applicable)
 
+- Obtain API keys for the services you wish to use.
+- Add them to the configuration file (e.g., `config.json`).
+
 ## Usage
 
 Run the main script to start using BlackBird-OSINT:
