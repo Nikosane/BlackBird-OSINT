@@ -46,5 +46,23 @@ Run the main script to start using BlackBird-OSINT:
 $ python blackbird.py
 ```
 
-- Obtain API keys for the services you wish to use.
-- Add them to the configuration file (e.g., `config.json`).
+### Example Commands
+
+- Search by username:
+
+  ```bash
+  $ python blackbird.py --username john_doe
+  ```
+
+- Search by email address:
+
+  ```bash
+  $ python blackbird.py --email john.doe@example.com
+  ```
+
+- Search by IP address:
+
+  ```bash
+  $ python blackbird.py --ip 192.168.1.1
+  ```
+
